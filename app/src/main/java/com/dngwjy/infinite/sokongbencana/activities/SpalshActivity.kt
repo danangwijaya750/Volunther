@@ -1,7 +1,8 @@
-package com.dngwjy.infinite.sokongbencana
+package com.dngwjy.infinite.sokongbencana.activities
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.dngwjy.infinite.sokongbencana.R
 
 class SpalshActivity : AppCompatActivity() {
 

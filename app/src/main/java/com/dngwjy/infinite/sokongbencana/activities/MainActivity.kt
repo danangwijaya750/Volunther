@@ -1,4 +1,4 @@
-package com.dngwjy.infinite.sokongbencana
+package com.dngwjy.infinite.sokongbencana.activities
 
 import android.annotation.SuppressLint
 import android.content.IntentFilter
@@ -6,19 +6,20 @@ import android.net.ConnectivityManager
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.design.widget.Snackbar
-import android.widget.TextView
-import android.widget.Toast
+import com.dngwjy.infinite.sokongbencana.utilities.Connectivity
+import com.dngwjy.infinite.sokongbencana.R
 
-import kotlinx.android.synthetic.main.activity_main.*
 @SuppressLint("Registered")
-open class MainActivity : AppCompatActivity(),Connectivity.ConnectivityReceiverListener {
+open class MainActivity : AppCompatActivity(),
+    Connectivity.ConnectivityReceiverListener {
     override fun networkConnect(connected: Boolean) {
         ShowMessage(connected)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        registerReceiver(Connectivity(),
+        registerReceiver(
+            Connectivity(),
             IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION)
         )
     }
@@ -40,7 +41,7 @@ open class MainActivity : AppCompatActivity(),Connectivity.ConnectivityReceiverL
 
     override fun onResume() {
         super.onResume()
-        Connectivity.connectListener=this
+        Connectivity.connectListener =this
     }
 
 }

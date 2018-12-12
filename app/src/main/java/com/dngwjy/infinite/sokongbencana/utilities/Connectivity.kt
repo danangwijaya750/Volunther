@@ -1,14 +1,14 @@
-package com.dngwjy.infinite.sokongbencana
+package com.dngwjy.infinite.sokongbencana.utilities
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.net.ConnectivityManager
 class Connectivity:BroadcastReceiver() {
     companion object {
-        var connectListener:ConnectivityReceiverListener? = null
+        var connectListener: ConnectivityReceiverListener? = null
     }
     override fun onReceive(context: Context, intent: Intent) {
-        if(connectListener!=null){
+        if(connectListener !=null){
             connectListener!!.networkConnect(isConnectorConnecting(context))
         }
     }
