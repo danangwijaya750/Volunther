@@ -1,18 +1,21 @@
-package com.dngwjy.infinite.sokongbencana.activities
+package com.dngwjy.infinite.sokongbencana.base
 
 import android.annotation.SuppressLint
 import android.content.IntentFilter
 import android.net.ConnectivityManager
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.support.design.widget.Snackbar
+import com.google.android.material.snackbar.Snackbar
 import com.dngwjy.infinite.sokongbencana.utilities.Connectivity
 import com.dngwjy.infinite.sokongbencana.R
+import com.google.android.material.snackbar.BaseTransientBottomBar
 
 @SuppressLint("Registered")
-open class MainActivity : AppCompatActivity(),
+abstract class BaseActivity : AppCompatActivity(),
     Connectivity.ConnectivityReceiverListener {
+    var isConnected:Boolean=false
     override fun networkConnect(connected: Boolean) {
+        isConnected=connected
         ShowMessage(connected)
     }
 
@@ -22,7 +25,9 @@ open class MainActivity : AppCompatActivity(),
             Connectivity(),
             IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION)
         )
+
     }
+
 
     fun ShowMessage(state:Boolean){
         var msg=""
@@ -34,9 +39,11 @@ open class MainActivity : AppCompatActivity(),
                 msg="You are Offline"
             }
         }
-        val snackBar= Snackbar.make(findViewById(R.id.rootLayout),msg,Snackbar.LENGTH_LONG)
-        snackBar.duration=Snackbar.LENGTH_INDEFINITE
+        val snackBar= Snackbar.make(findViewById(R.id.rootLayout),msg,
+            Snackbar.LENGTH_LONG)
+        snackBar.duration= BaseTransientBottomBar.LENGTH_SHORT
         snackBar.show()
+
     }
 
     override fun onResume() {

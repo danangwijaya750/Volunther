@@ -1,6 +1,6 @@
-package com.dngwjy.infinite.sokongbencana.activities
+package com.dngwjy.infinite.sokongbencana.ui
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.dngwjy.infinite.sokongbencana.R
 
