@@ -13,16 +13,16 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".ui.LoginActivity">
+        <activity android:name=".ui.activities.LoginActivity">
         </activity>
-        <activity android:name=".ui.HomeActivity">
+        <activity android:name=".ui.activities.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".ui.SpalshActivity">
+        <activity android:name=".ui.activities.SpalshActivity">
         </activity>
     </application>
 

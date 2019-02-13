@@ -1,4 +1,4 @@
-package com.dngwjy.infinite.sokongbencana.ui
+package com.dngwjy.infinite.sokongbencana.ui.activities
 
 import android.os.Bundle
 import androidx.lifecycle.Observer

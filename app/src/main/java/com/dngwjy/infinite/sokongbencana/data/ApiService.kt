@@ -4,6 +4,7 @@ import com.dngwjy.infinite.sokongbencana.data.models.logistic.LogisticResoponse
 import com.dngwjy.infinite.sokongbencana.data.models.posko.PoskoResponse
 import io.reactivex.Observable
 import retrofit2.http.GET
+import retrofit2.http.POST
 
 interface ApiService {
     @GET("bins/16bn1k")
@@ -11,4 +12,5 @@ interface ApiService {
 
     @GET("")
     fun getLogistic():Observable<LogisticResoponse>
+
 }
