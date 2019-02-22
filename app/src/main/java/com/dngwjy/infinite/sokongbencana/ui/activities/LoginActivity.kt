@@ -13,6 +13,7 @@ var isLogin=true
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+        supportActionBar!!.hide()
         email_sign_in_button.setOnClickListener {
             when(isLogin){
                 true->doLogin()
