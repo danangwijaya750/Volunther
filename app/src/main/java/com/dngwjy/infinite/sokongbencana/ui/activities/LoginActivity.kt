@@ -9,11 +9,12 @@ import com.dngwjy.infinite.sokongbencana.data.shared.Preferences
 import kotlinx.android.synthetic.main.activity_login.*
 class LoginActivity : BaseActivity() {
 var isLogin=true
-    private val preferences=Preferences(this)
+    lateinit var  preferences:Preferences
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         supportActionBar!!.hide()
+        preferences=Preferences(this)
         email_sign_in_button.setOnClickListener {
             when(isLogin){
                 true->doLogin()
