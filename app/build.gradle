@@ -21,6 +21,10 @@ android {
         }
     }
 }
+
+androidExtensions {
+    experimental = true
+}
 ext {
     versions = [
             appCompat: '1.0.2',

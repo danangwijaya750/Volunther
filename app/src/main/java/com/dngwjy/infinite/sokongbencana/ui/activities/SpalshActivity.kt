@@ -5,8 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import com.dngwjy.infinite.sokongbencana.R
+import com.dngwjy.infinite.sokongbencana.base.BaseActivity
 
-class SpalshActivity : AppCompatActivity() {
+class SpalshActivity : BaseActivity() {
     private var mHandler: Handler? = null
     private val SPLASH_DELAY : Long = 3000
     internal val mRunnable : Runnable = Runnable {

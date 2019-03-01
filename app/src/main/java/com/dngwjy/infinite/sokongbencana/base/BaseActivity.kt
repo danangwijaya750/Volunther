@@ -25,7 +25,6 @@ abstract class BaseActivity : AppCompatActivity(),
             Connectivity(),
             IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION)
         )
-
     }
 
 

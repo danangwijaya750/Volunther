@@ -31,7 +31,7 @@ class HomeActivity : BaseActivity(),Observer<LiveDataState> {
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_korban)
+        setContentView(R.layout.activity_main)
         poskoViewModel.liveDataState.observe(this,this)
     }
 }
