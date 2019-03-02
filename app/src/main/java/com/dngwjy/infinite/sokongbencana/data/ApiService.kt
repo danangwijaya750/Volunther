@@ -1,7 +1,6 @@
 package com.dngwjy.infinite.sokongbencana.data
 
-import com.dngwjy.infinite.sokongbencana.data.models.login.LoginInfo
-import com.dngwjy.infinite.sokongbencana.data.models.login.LoginResponse
+import com.dngwjy.infinite.sokongbencana.data.models.disaster.DisasterResponse
 import com.dngwjy.infinite.sokongbencana.data.models.logistic.LogisticResoponse
 import com.dngwjy.infinite.sokongbencana.data.models.posko.PoskoResponse
 import io.reactivex.Observable
@@ -16,6 +15,6 @@ interface ApiService {
     fun getLogistic():Observable<LogisticResoponse>
 
     @GET("")
-    fun doLogin():Observable<LoginResponse>
+    fun getDisasters():Observable<DisasterResponse>
 
 }

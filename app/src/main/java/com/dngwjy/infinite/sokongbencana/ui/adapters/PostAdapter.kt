@@ -30,7 +30,7 @@ RecyclerView.Adapter<PostAdapter.ViewHolder>()
         fun bindData(data:PoskoModel,listen:(PoskoModel)->Unit){
             judulPos.text=data.namaPosko
             alamatPos.text=data.lokasiPosko
-            //Glide.with(containerView).load(data.namaPosko).into(gambarPos)
+            Glide.with(containerView).load(data.imagePhoto).into(gambarPos)
         }
     }
 }

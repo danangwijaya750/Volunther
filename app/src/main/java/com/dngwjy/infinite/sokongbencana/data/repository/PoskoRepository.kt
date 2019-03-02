@@ -12,7 +12,8 @@ fun getPosko():Observable<List<PoskoModel>>{
         PoskoModel(
             namaPosko = it.namaPosko,
             idPosko = it.idPosko,
-            lokasiPosko = it.lokasiPosko
+            lokasiPosko = it.lokasiPosko,
+            imagePosko = it.imagePosko
         )
     }.toList().toObservable()
 }

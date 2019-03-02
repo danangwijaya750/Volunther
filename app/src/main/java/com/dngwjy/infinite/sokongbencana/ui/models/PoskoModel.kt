@@ -7,5 +7,6 @@ import kotlinx.android.parcel.Parcelize
 data class PoskoModel(
     var idPosko:String,
     var namaPosko:String,
-    var lokasiPosko:String
+    var lokasiPosko:String,
+    var imagePosko:String
 ) : Parcelable
