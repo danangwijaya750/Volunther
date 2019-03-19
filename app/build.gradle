@@ -80,6 +80,8 @@ dependencies {
     implementation rxDeps.values()
     implementation otherDeps.values()
 
+    implementation 'androidx.appcompat:appcompat:1.0.0-beta01'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.2'
     annotationProcessor 'com.github.bumptech.glide:compiler:' + versions.glide
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.0-alpha4'
